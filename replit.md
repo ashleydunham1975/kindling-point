@@ -1,40 +1,58 @@
-# Replit.md
+# Kindling Point - College Counseling Website
 
 ## Overview
 
-This is a web application configured for Firebase Hosting deployment. The project appears to be a single-page application (SPA) with client-side routing, as indicated by the rewrite rules that direct all requests to `index.html`.
+Kindling Point is a static marketing website for a college counseling and student development service. The site helps high school students discover their passions, develop personal narratives, and prepare for college applications. It features a single-page marketing site with sections for the company's approach, testimonials, and contact information.
+
+**This is a static site with no backend or database.**
 
 ## User Preferences
 
-Preferred communication style: Simple, everyday language.
+- Preferred communication style: Simple, everyday language
+- Design aesthetic: "Warm Academic" with Deep Navy (#094b75) and Warm Orange (#f5a623)
+- Contact approach: Direct email/phone links only (no form submission)
 
 ## System Architecture
 
-### Frontend Architecture
+### Static Site Architecture
+- **Framework**: React 18 with TypeScript
+- **Routing**: Wouter for lightweight client-side routing
+- **Styling**: Tailwind CSS v4 with shadcn/ui component library (New York style)
+- **Animations**: Framer Motion for page transitions and scroll animations
+- **Build Tool**: Vite
 
-- **Single-Page Application (SPA)**: The Firebase configuration shows all routes rewrite to `index.html`, indicating client-side routing is used
-- **Build Output**: Compiled assets are placed in `dist/public` directory
-- **Framework**: The specific frontend framework is not yet determined from the current files, but the structure suggests a modern JavaScript framework (React, Vue, or similar)
+The site is a single-page application with smooth scroll navigation between sections (Hero, About, Services/Approach, Testimonials, Contact). Components are organized in `client/src/components/` with UI primitives in `client/src/components/ui/`.
 
-### Hosting & Deployment
+### Project Structure
+```
+├── client/           # Frontend React application
+│   ├── src/
+│   │   ├── components/   # React components including UI library
+│   │   ├── pages/        # Page components (Home, NotFound)
+│   │   ├── hooks/        # Custom React hooks
+│   │   └── lib/          # Utilities and query client
+├── server/           # Minimal Vite dev server wrapper
+│   └── index.ts      # Runs Vite for development
+├── script/           # Build scripts
+│   └── build.ts      # Runs Vite build for production
+```
 
-- **Firebase Hosting**: The application is configured to deploy to Firebase Hosting
-- **Static File Serving**: The `dist/public` directory serves as the public root for all static assets
-- **Ignored Files**: Standard exclusions for `node_modules`, dotfiles, and the Firebase config itself
-
-### Build System
-
-- **Output Directory**: `dist/public` suggests a build tool (Vite, Webpack, or similar) compiles source files into this distribution folder
+### Path Aliases
+- `@/*` → `client/src/*`
+- `@assets` → `attached_assets/`
 
 ## External Dependencies
 
-### Third-Party Services
+### UI Libraries
+- **shadcn/ui**: Pre-built accessible components based on Radix UI primitives
+- **Radix UI**: Headless UI component primitives for accessibility
+- **Lucide React**: Icon library
+- **Embla Carousel**: Touch-friendly carousel for testimonials
 
-| Service | Purpose |
-|---------|---------|
-| Firebase Hosting | Static site hosting and CDN delivery |
+### Frontend Tooling
+- **Vite**: Development server and build tool
+- **Framer Motion**: Animation library
+- **Zod**: Runtime type validation
 
-### Infrastructure
-
-- **CDN**: Firebase Hosting provides global CDN distribution
-- **SSL**: Automatic HTTPS provided by Firebase
+### Fonts
+- **Google Fonts**: Libre Baskerville (serif) and Plus Jakarta Sans (sans-serif) loaded via CDN
