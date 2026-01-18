@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export function Contact() {
-  const emailAddress = "contact@kindlingpoint.com";
+  const emailAddress = "kindling.point@yahoo.com";
   
   const handleEmailClick = () => {
     window.location.href = `mailto:${emailAddress}?subject=Kindling Point Inquiry`;
@@ -32,7 +32,7 @@ export function Contact() {
                 <div className="h-10 w-10 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
                   <Mail className="h-5 w-5" />
                 </div>
-                <p className="text-lg">contact@kindlingpoint.com</p>
+                <p className="text-lg">kindling.point@yahoo.com</p>
               </div>
               <div className="flex items-center gap-4">
                 <div className="h-10 w-10 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
