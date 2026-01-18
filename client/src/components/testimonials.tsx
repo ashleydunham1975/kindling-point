@@ -14,7 +14,7 @@ const testimonials = [
     role: "Recent high school graduate"
   },
   {
-    quote: "We reached out to Kindling Point for guidance on expanding our daughter’s extracurriculars. She's an exceptional athlete, but that leaves little time for other activities, and we're already feeling the pressure around college admissions three years out. Meeting with Ashley instantly put us at ease. She reassured us that there’s no formula for success and introduced a thoughtful approach that builds on our daughter’s passions for cheerleading and animal welfare. Ashley has recommended some creative ways for her to test and lead while honoring her team commitments. We’re excited to build on these ideas in the years ahead.",
+    quote: "We reached out to Kindling Point for guidance on expanding our daughter’s extracurriculars. She's an exceptional athlete, but that leaves little time for other activities, and we're already feeling the pressure around college admissions three years out. Meeting with Ashley instantly put us at ease. She reassured us that there’s no formula for success and introduced a thoughtful approach that builds on our daughter’s passions for cheerleading and animal science. Ashley has recommended some creative ways for her to test and lead while honoring her team commitments. We’re excited to build on these ideas in the years ahead.",
     author: "Parent",
     role: "High school freshman"
   }
